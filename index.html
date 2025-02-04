@@ -2,31 +2,94 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- favicon link here -->
-     <link rel="shortcut icon" href="./assets/vegetable-busket.png" type="image/x-icon">
-    <title>Freshness-Tailwind-4</title>
-    <!-- google font link sora font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
-    <!-- font awesome cdn link -->
-    <script src="https://kit.fontawesome.com/cd6c7339f0.js" crossorigin="anonymous"></script>
-    <!-- tailwind cdn link -->
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <!-- tailwind customize style here -->
-    <style type="text/tailwindcss">
-        @theme {
-          --color-clifford: green;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- favicon link here -->
+  <link rel="shortcut icon" href="./assets/vegetable-busket.png" type="image/x-icon">
+  <title>Freshness-Tailwind-4</title>
+  <!-- google font link sora font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+  <!-- font awesome cdn link -->
+  <script src="https://kit.fontawesome.com/cd6c7339f0.js" crossorigin="anonymous"></script>
+  <!-- tailwind cdn link -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <!-- tailwind customize style here -->
+  <style type="text/tailwindcss">
+    @theme {
           --font-sora: Sora, serif;
+          --color-white-color: #ffffff;
+          --color-primary-color: #179800;
+          --color-title-color: #111111;
+          --color-description-color: #545350;
+          --color-header-bg: #EFEBE3;
+          --color-offer1-bg: #115414;
+          --color-offer2-bg: #102861;
+        }
+
+        .flex-center{
+          @apply flex items-center justify-center
+        }
+
+        .hover-custom{
+          @apply hover:text-primary-color duration-300
+        }
+        .btn-primary{
+          @apply bg-primary-color py-2 px-4 rounded-lg cursor-pointer text-white-color hover:bg-white-color hover:text-primary-color duration-300 border border-primary-color
+        }
+        .btn-login{
+          @apply bg-white-color py-2 px-4 rounded-lg cursor-pointer text-primary-color border border-primary-color hover:bg-primary-color hover:text-white-color duration-300 mr-2
         }
         
       </style>
 </head>
 
-<body class="font-sora">
-    <h1>hello</h1>
+<body class="font-sora text-title-color">
+
+  <header class="bg-linear-to-t from-header-bg to-white-color">
+    <!-- header main container -->
+    <section class="max-w-screen-xl mx-auto px-4 lg:px-0">
+      <nav class="flex items-center justify-between py-3 text-lg">
+        <!-- logo -->
+        <div>
+          <a href="#">
+            <img class="w-28" src="./assets/logo-header.png" alt="navbar logo photo">
+          </a>
+        </div>
+        <!-- menu -->
+        <div class="hidden md:block">
+          <ul class="flex-center gap-10">
+            <li class="hover-custom"><a href="#">Product</a></li>
+            <li class="hover-custom"><a href="#">Services</a></li>
+            <li class="hover-custom"><a href="#">Contact us</a></li>
+          </ul>
+        </div>
+        <!-- login -->
+        <div class="hidden md:block">
+          <div class="flex-center">
+            <a href="#">
+              <i class="fa-solid fa-magnifying-glass hover-custom"></i>
+            </a>
+            <a href="#">
+              <i class="fa-solid fa-cart-shopping hover-custom mx-4"></i>
+            </a>
+            <button class="btn-login">Login</button>
+            <button class="btn-primary">Register</button>
+          </div>
+        </div>
+        <!-- hamburg -->
+        <div class="block md:hidden">
+          <i class="fa-solid fa-bars text-3xl hover-custom cursor-pointer"></i>
+        </div>
+      </nav>
+    </section>
+  </header>
+
+  <main></main>
+
+  <footer></footer>
+
 </body>
 
 </html>
